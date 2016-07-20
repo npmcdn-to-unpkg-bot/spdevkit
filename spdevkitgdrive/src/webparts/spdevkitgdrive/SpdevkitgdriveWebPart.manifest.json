@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@ms/sp-modules-common/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "3ebb899c-6522-470e-9e46-bd324f5a39b8",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "3ebb899c-6522-470e-9e46-bd324f5a39b8",
+    "group": { "default": "Under Development" },
+    "title": { "default": "SpdevkitgdriveSpdevkitgdrive" },
+    "description": { "default": "spdevkitgdrive" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "Spdevkitgdrive Spdevkitgdrive",
+      "value": 15
+    }
+  }]
+}
