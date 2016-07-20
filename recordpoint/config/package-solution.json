@@ -1,0 +1,11 @@
+{
+  "solution": {
+    "name": "simonpb-recordpoint-client-side-solution",
+    "id": "18c8a786-90fa-454b-88b0-03e8d04f0968",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "manifestsMatch": "dist/**/*.manifest.json",
+    "zippedPackage": "simonpb-recordpoint.spapp"
+  }
+}
