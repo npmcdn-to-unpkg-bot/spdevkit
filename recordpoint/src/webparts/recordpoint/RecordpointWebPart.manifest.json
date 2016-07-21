@@ -17,7 +17,8 @@
       "authname": "spdevkitrecordpoint",
       "heatmap_variable": 2,
       "zoom": 10,
-      "pokedatahosturl": "rplt0066:1954"
+      "pokedatahosturl": "localhost:11920",
+      "pokedatahostpolltime": 2
     }
   }]
 }

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="PropertyPaneDescription" xml:space="preserve">
-    <value>Manage the Recordpoint webpart settings.</value>
+    <value>Manage the Pokemon Go webpart settings.</value>
     <comment>The property pane header string.</comment>
   </data>
   <data name="BasicGroupName" xml:space="preserve">
