@@ -13,8 +13,10 @@
     "description": { "default": "recordpoint" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "Simonpb Recordpoint",
-      "value": 15
+      "authkey": "954450-8-405949499449580394",
+      "authname": "spdevkitrecordpoint",
+      "heatmap_variable": 2,
+      "zoom": 10
     }
   }]
 }

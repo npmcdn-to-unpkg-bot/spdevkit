@@ -38,7 +38,10 @@ import * as $ from 'jquery';
 
 
 export interface IRecordpointWebPartProps {
-  description: string;
+  zoom: number;
+  heatmap_variable: string;
+  authname: string;
+  authkey: string;
 }
 
 export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpointWebPartProps> {
@@ -74,7 +77,7 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
     });
 
     // start the map in South-East England
-    map.setView(new L.LatLng(47.6356316,-122.1409979), 10);
+    map.setView(new L.LatLng(47.6356316,-122.1409979), this.properties.zoom);
     map.addLayer(osm);
 
     var geojsonFeature =
@@ -137,7 +140,7 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
                   {key: 'Poke', text: 'Pokemon'},
                   {key: 'Pop', text: 'Population'}
                 ]
-                })  
+                })
               ]
             }
           ]
