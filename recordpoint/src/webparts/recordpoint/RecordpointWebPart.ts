@@ -108,7 +108,7 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
     this.map = map;
     this.layer = layer;
 
-    $( "div" ).find("#map").css( "height", "700px" );
+    $( "div" ).find("#map").css( "height", "710px" );
   }
 
   public render(mode: DisplayMode, data?: IWebPartData): void {
