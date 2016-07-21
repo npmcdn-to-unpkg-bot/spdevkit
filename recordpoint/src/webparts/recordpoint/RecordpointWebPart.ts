@@ -27,7 +27,6 @@ import strings from './loc/Strings.resx';
 import {
     Map,
     Icon,
-    Point
 } from "leaflet";
 
 import {
@@ -42,12 +41,14 @@ export interface IRecordpointWebPartProps {
   heatmap_variable: string;
   authname: string;
   authkey: string;
+  pokedatahosturl: string;
 }
 
 export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpointWebPartProps> {
 
   private map: Map;
   private icon: Icon;
+  private layer: L.LayerGroup<L.ILayer>;
 
   public constructor(context: IWebPartContext) {
     super(context);
@@ -55,9 +56,23 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
     this.host.resourceLoader.loadCSS("https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css");
   }
 
-  private onMapResize( oldsize: L.Point,  newsize :L.Point)
-  {
-  }
+  private pollPokemonOneHost(): void {
+    //console.log('pollPokemonOneHost');
+
+    $.get( "http://" + this.properties.pokedatahosturl + "/get", function( data ) {
+      //$( ".result" ).html( data );
+      //alert( "Load was performed." );
+      if(this.layer != null)
+      {
+        this.map.removeLayer(this.layer);
+      }
+
+      this.layer = L.geoJson(data).addTo(this.map);
+    });
+    setTimeout(() => {
+          this.pollPokemonOneHost();
+      }, 1000);
+  };
 
   private initialiseMap(): void {
 
@@ -86,6 +101,7 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
     var layer = L.geoJson(geojsonFeature).addTo(map);
 
     this.map = map;
+    this.layer = layer;
 
     $( "div" ).find("#map").css( "height", "700px" );
   }
@@ -104,9 +120,15 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
       </div>
     </div>`;
 
+    // prob. better to use promises, but I can't be bothered learning how to do it in typescript and time is running out!
     setTimeout(() => {
           this.initialiseMap();
       }, 1000);
+
+
+    setTimeout(() => {
+          this.pollPokemonOneHost();
+      }, 5000);
   }
 
   protected get propertyPaneSettings(): IPropertyPaneSettings {
@@ -118,13 +140,16 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
           },
           groups: [
             {
-              groupName: 'Authentication',
+              groupName: 'Connectivity',
               groupFields: [
                 PropertyPaneTextField('authname', {
                   label: 'Auth Name'
                 }),
                 PropertyPaneTextField('authkey', {
                   label: 'Auth Key'
+                }),
+                PropertyPaneTextField('pokedatahosturl', {
+                  label: 'Pokemon Go Service'
                 })
               ]
             },

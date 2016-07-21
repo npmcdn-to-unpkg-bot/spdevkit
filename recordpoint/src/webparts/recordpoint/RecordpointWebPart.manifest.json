@@ -9,14 +9,15 @@
   "preconfiguredEntries": [{
     "groupId": "7005e3b9-7c48-43e6-843c-7eea37f6039b",
     "group": { "default": "Under Development" },
-    "title": { "default": "SimonpbRecordpoint" },
-    "description": { "default": "recordpoint" },
+    "title": { "default": "Pokemon Go!" },
+    "description": { "default": "See where the Pokemons are in real time" },
     "officeFabricIconFontName": "Page",
     "properties": {
       "authkey": "954450-8-405949499449580394",
       "authname": "spdevkitrecordpoint",
       "heatmap_variable": 2,
-      "zoom": 10
+      "zoom": 10,
+      "pokedatahosturl": "rplt0066:1954"
     }
   }]
 }
