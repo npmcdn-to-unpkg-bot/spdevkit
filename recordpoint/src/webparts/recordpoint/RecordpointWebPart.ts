@@ -17,7 +17,8 @@ import {
     IPropertyPaneSettings,
     IWebPartContext,
     IWebPartData,
-    PropertyPaneTextField
+    PropertyPaneTextField,
+    PropertyPaneDropdown
 } from '@ms/sp-client-platform';
 
 import styles from './Recordpoint.module.scss';
@@ -114,11 +115,29 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
+              groupName: 'Authentication',
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneTextField('authname', {
+                  label: 'Auth Name'
+                }),
+                PropertyPaneTextField('authkey', {
+                  label: 'Auth Key'
                 })
+              ]
+            },
+            {
+              groupName: 'Map Configuration',
+              groupFields: [
+                PropertyPaneTextField('zoom', {
+                  label: 'Zoom Level'
+                }),
+                PropertyPaneDropdown('heatmap_variable', {
+                label: 'Heatmap Statistic',
+                options: [
+                  {key: 'Poke', text: 'Pokemon'},
+                  {key: 'Pop', text: 'Population'}
+                ]
+                })  
               ]
             }
           ]
