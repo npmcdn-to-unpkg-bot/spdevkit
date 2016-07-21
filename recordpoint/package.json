@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "@ms/sp-client-base": "~0.1.5",
-    "@ms/sp-client-platform": "~0.1.6"
+    "@ms/sp-client-platform": "~0.1.6",
+    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "@ms/ms-core-build": "~0.4.27",

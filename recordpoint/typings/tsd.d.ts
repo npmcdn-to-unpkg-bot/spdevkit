@@ -16,3 +16,7 @@
 /// <reference path="whatwg-fetch/whatwg-fetch.d.ts" />
 /// <reference path="knockout/knockout.d.ts" />
 /// <reference path="combokeys/combokeys.d.ts" />
+/// <reference path="jquery/jquery.d.ts" />
+/// <reference path="jqueryui/jqueryui.d.ts" />
+/// <reference path="leaflet/leaflet.d.ts" />
+/// <reference path="geojson/geojson.d.ts" />
