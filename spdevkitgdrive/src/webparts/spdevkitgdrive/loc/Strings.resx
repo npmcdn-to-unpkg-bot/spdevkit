@@ -125,6 +125,14 @@
     <value>Basic</value>
     <comment>The basic group name.</comment>
   </data>
+  <data name="AuthenticationPaneName" xml:space="preserve">
+    <value>Authentication Configuration</value>
+    <comment>The Authentication pane header string.</comment>
+  </data>
+  <data name="AuthenticationGroupName" xml:space="preserve">
+    <value>Google API Authentication</value>
+    <comment>The Authenticaiton Group header string.</comment>
+  </data>
   <data name="DescriptionFieldLabel" xml:space="preserve">
     <value>Description</value>
     <comment>The label for the description field in property pane.</comment>
