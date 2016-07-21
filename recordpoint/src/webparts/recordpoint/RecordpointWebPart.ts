@@ -59,15 +59,20 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
   private pollPokemonOneHost(): void {
     //console.log('pollPokemonOneHost');
 
-    $.get( "http://" + this.properties.pokedatahosturl + "/get", function( data ) {
-      //$( ".result" ).html( data );
-      //alert( "Load was performed." );
-      if(this.layer != null)
+    var url = "http://" + this.properties.pokedatahosturl + "/api/values/get";
+    console.log(url);
+    var webPart = this;
+
+    $.get(url, function( data ) {
+
+      if(webPart.layer != null)
       {
-        this.map.removeLayer(this.layer);
+        webPart.map.removeLayer(webPart.layer);
       }
 
-      this.layer = L.geoJson(data).addTo(this.map);
+      let jsonObject = JSON.parse(data);
+      webPart.layer = L.geoJson(jsonObject).addTo(webPart.map);
+
     });
     setTimeout(() => {
           this.pollPokemonOneHost();
