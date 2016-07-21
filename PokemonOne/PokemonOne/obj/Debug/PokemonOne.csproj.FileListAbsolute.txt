@@ -44,3 +44,6 @@ d:\simonp\documents\visual studio 2015\Projects\PokemonOne\PokemonOne\bin\Antlr3
 d:\simonp\documents\visual studio 2015\Projects\PokemonOne\PokemonOne\obj\Debug\PokemonOne.csprojResolveAssemblyReference.cache
 d:\simonp\documents\visual studio 2015\Projects\PokemonOne\PokemonOne\obj\Debug\PokemonOne.dll
 d:\simonp\documents\visual studio 2015\Projects\PokemonOne\PokemonOne\obj\Debug\PokemonOne.pdb
+d:\SimonP\Documents\Visual Studio 2015\Projects\PokemonOne\PokemonOne\bin\System.Web.Cors.dll
+d:\SimonP\Documents\Visual Studio 2015\Projects\PokemonOne\PokemonOne\bin\System.Web.Http.Cors.dll
+d:\SimonP\Documents\Visual Studio 2015\Projects\PokemonOne\PokemonOne\bin\System.Web.Http.Cors.xml
