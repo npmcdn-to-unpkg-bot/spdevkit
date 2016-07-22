@@ -1,4 +1,0 @@
-{
-  "shouldWrapProductionManifestForManifestServer": false,
-  "cdnBasePath": "https://devkitchen.blob.core.windows.net/spdevkitgdrive-spdevkitgdrive/deploy/"
-}
