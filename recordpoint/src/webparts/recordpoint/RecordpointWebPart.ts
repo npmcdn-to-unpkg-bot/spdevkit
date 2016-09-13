@@ -54,7 +54,7 @@ export default class RecordpointWebPart extends BaseClientSideWebPart<IRecordpoi
   public constructor(context: IWebPartContext) {
     super(context);
 
-    this.host.resourceLoader.loadCSS("https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css");
+    this.host.resourceLoader.loadCSS("https://unpkg.com/leaflet@0.7.7/dist/leaflet.css");
   }
 
   private pollPokemonOneHost(): void {
